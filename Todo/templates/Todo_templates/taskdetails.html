@@ -1,0 +1,9 @@
+{% extends 'Todo_templates/main.html' %}
+{% block content %}
+  <a class="btn btn-primary" href="{% url 'tasklist' %}">Go back</a>
+  <h2>Task: {{tasksdetails}}</h2>
+  <h2>Description: {{tasksdetails.description}}</h2>
+
+
+
+{% endblock content %}

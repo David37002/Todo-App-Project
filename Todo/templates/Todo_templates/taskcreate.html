@@ -1,0 +1,11 @@
+{% extends 'Todo_templates/main.html' %}
+{% block content %}
+  <a class="btn btn-primary" href="{% url 'tasklist' %}">Go back</a>
+  <h1>This is the creation form</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" class="btn btn-success"  value="Submit">
+
+  </form>
+{% endblock content %}

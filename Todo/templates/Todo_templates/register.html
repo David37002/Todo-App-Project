@@ -1,0 +1,19 @@
+{% extends 'Todo_templates/main.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+  <h1>Registration Page</h1>
+
+  <div class="card-body">
+    <form method="post">
+
+      {% csrf_token %}
+      {{form|crispy}}
+      <input type="submit" class="btn btn-primary" value="Register">
+      </form>
+  </div>
+
+
+  <p>Already have an account? <a class="btn btn-success" href="{% url 'login' %}">Login</a></p>
+
+{% endblock content %}

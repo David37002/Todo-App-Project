@@ -1,0 +1,14 @@
+{% extends 'Todo_templates/main.html' %}
+{% block content %}
+  <h1>Loginpage</h1>
+
+  <form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" class="btn btn-success"  value="Login">
+
+  </form>
+
+  <p>Don't have an account yet? <a class="btn btn-primary" href="{% url 'registrationpage' %}">Register</a></p>
+
+{% endblock content %}

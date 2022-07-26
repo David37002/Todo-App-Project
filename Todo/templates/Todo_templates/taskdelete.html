@@ -1,0 +1,12 @@
+{% extends 'Todo_templates/main.html' %}
+{% block content %}
+  <h1>Delete Task</h1>
+  <a class="btn btn-primary" href="{% url 'tasklist' %}">Go back</a>
+  <form method="post">
+    {% csrf_token %}
+    <p>Are you sure you want to delete this task: {{taskname}}</p>
+
+    <input type="submit" class="btn btn-danger"  value="Delete">
+
+  </form>
+{% endblock content %}
